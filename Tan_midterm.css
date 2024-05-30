@@ -1,0 +1,45 @@
+body.html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(pokemon.png)
+    background-size: cover;
+    background-position: center;
+}
+
+.badge{
+    padding: 0.5rem;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 80%;
+    height: 80%;
+    transition: all 0.5s ease;
+}
+
+b
+.pokemon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 22%;
+}
+
+.pokemon img{
+    width: 80px;
+    height: 80px;
+}
