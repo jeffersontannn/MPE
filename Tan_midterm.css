@@ -1,4 +1,4 @@
-body, html {
+body.html {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -6,7 +6,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('pokemon.jpg');
+    background-image: url('pokemons.jpeg');
     background-size: cover;
     background-position: center;
 }
@@ -46,18 +46,20 @@ body, html {
 }
  
 .pokeball-icon {
-    display: none; 
+    display: none; /
     width: 20px;
     height: 20px;
     margin-top: 10px;
 }
  
+
 @media (min-width: 900px) {
     .pokemon-card {
         flex: 0 0 calc(25% - 20px);
     }
 }
  
+
 @media (max-width: 899px) {
     .pokemon-card {
         flex: 0 0 calc(33.33% - 20px);
@@ -76,6 +78,7 @@ body, html {
     }
 }
  
+
 @media (max-width: 400px) {
     .pokemon-card {
         flex-direction: column;
@@ -91,6 +94,7 @@ body, html {
     }
 }
  
+
 .pokemon-card:hover {
     background-image: url('img/hover-background.jpg');
 }
