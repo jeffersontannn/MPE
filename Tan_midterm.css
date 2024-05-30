@@ -1,45 +1,101 @@
-body.html{
+body, html {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body{
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
-    height: 100vh;
-    background-image: url(pokemon.png)
+    align-items: center;
+    background-image: url('pokemon.jpg');
     background-size: cover;
     background-position: center;
 }
-
-.badge{
-    padding: 0.5rem;
+ 
+.container {
+    width: 90%;
+    max-width: 1200px;
 }
-
-.container{
+ 
+.pokemon-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-content: center;
-    width: 80%;
-    height: 80%;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
 }
-
-b
-.pokemon{
+ 
+.pokemon-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     margin: 10px;
-    padding: 20px;
-    border-radius: 10px;
-    width: 22%;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-image 0.3s ease;
 }
-
-.pokemon img{
-    width: 80px;
-    height: 80px;
+ 
+.pokemon-card img {
+    width: 100px;
+    height: 100px;
+}
+ 
+.pokemon-name {
+    display: none; /* Initially hidden for grid view */
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+ 
+.pokeball-icon {
+    display: none; /* Initially hidden for grid view */
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+}
+ 
+/* Grid layout - 4 by 3 */
+@media (min-width: 900px) {
+    .pokemon-card {
+        flex: 0 0 calc(25% - 20px);
+    }
+}
+ 
+/* Grid layout - 3 by 4 */
+@media (max-width: 899px) {
+    .pokemon-card {
+        flex: 0 0 calc(33.33% - 20px);
+    }
+}
+ 
+/* List layout */
+@media (max-width: 600px) {
+    .pokemon-card {
+        flex-direction: row;
+        justify-content: space-between;
+        flex: 0 0 100%;
+    }
+ 
+    .pokemon-name, .pokeball-icon {
+        display: inline;
+    }
+}
+ 
+/* Card layout */
+@media (max-width: 400px) {
+    .pokemon-card {
+        flex-direction: column;
+        align-items: center;
+    }
+ 
+    .pokeball-icon {
+        display: none;
+    }
+ 
+    .pokemon-name {
+        display: block;
+    }
+}
+ 
+/* Hover effect */
+.pokemon-card:hover {
+    background-image: url('img/hover-background.jpg');
 }
