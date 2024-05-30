@@ -39,34 +39,31 @@ body, html {
 }
  
 .pokemon-name {
-    display: none; /* Initially hidden for grid view */
+    display: none; 
     margin-top: 10px;
     font-size: 16px;
     font-weight: bold;
 }
  
 .pokeball-icon {
-    display: none; /* Initially hidden for grid view */
+    display: none; 
     width: 20px;
     height: 20px;
     margin-top: 10px;
 }
  
-/* Grid layout - 4 by 3 */
 @media (min-width: 900px) {
     .pokemon-card {
         flex: 0 0 calc(25% - 20px);
     }
 }
  
-/* Grid layout - 3 by 4 */
 @media (max-width: 899px) {
     .pokemon-card {
         flex: 0 0 calc(33.33% - 20px);
     }
 }
  
-/* List layout */
 @media (max-width: 600px) {
     .pokemon-card {
         flex-direction: row;
@@ -79,7 +76,6 @@ body, html {
     }
 }
  
-/* Card layout */
 @media (max-width: 400px) {
     .pokemon-card {
         flex-direction: column;
@@ -95,7 +91,6 @@ body, html {
     }
 }
  
-/* Hover effect */
 .pokemon-card:hover {
     background-image: url('img/hover-background.jpg');
 }
